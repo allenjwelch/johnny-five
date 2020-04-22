@@ -30,5 +30,5 @@ t2 run <file.js>
 `interuder-alert.js`  
 ![magnetic switch with SMS messaging](https://i.imgur.com/1W9IlPB.jpg)
 ![magnetic switch with SMS messaging](https://i.imgur.com/bN5MIvA.jpg)
-<img src="https://i.imgur.com/FX9B1Go.png" alt="magnetic switch with SMS messaging" style="width:200px;"/>
+<img src="https://i.imgur.com/FX9B1Go.png" alt="magnetic switch with SMS messaging" style="max-width:200px;"/>
   
