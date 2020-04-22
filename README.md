@@ -16,19 +16,19 @@ t2 run <file.js>
 ![analog sensor experiement](https://i.imgur.com/C5WHZ0F.jpg)
 
 `button.js`  
-![button experiment](https://i.imgur.com/v7qMruO.jpg)
 ![button experiment](https://i.imgur.com/LkSXAQR.jpg)
+![button experiment](https://i.imgur.com/v7qMruO.jpg)
   
 `buttons-led.js`  
 ![multiple buttons with leds experiement](https://i.imgur.com/5AJmexJ.jpg)
 ![multiple buttons with leds experiement](https://i.imgur.com/ARx263g.jpg)
   
-`switch.js`
+`switch.js`  
 ![spdt switch experiement](https://i.imgur.com/C9GBTyx.jpg)
 ![spdt switch experiement](https://i.imgur.com/H8SyKeB.jpg)
   
-`interuder-alert.js`
+`interuder-alert.js`  
 ![magnetic switch with SMS messaging](https://i.imgur.com/1W9IlPB.jpg)
 ![magnetic switch with SMS messaging](https://i.imgur.com/bN5MIvA.jpg)
-![magnetic switch with SMS messaging](https://i.imgur.com/FX9B1Go.png)
+<img src="https://i.imgur.com/FX9B1Go.png" alt="magnetic switch with SMS messaging" style="width:200px;"/>
   
