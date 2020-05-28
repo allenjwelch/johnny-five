@@ -14,8 +14,17 @@ board.on("ready", function() {
     });
 
     // Clockwise, top speed.
-    servo.cw(0);
-    led.blink();
+    // servo.cw(0);
+    // led.blink();
+    setInterval(() => {
+        led.stop();
+        servo.cw(1);
+
+        setTimeout(()=> {
+            servo.stop();
+            led.on();
+        }, 1000)
+    }, 2000)
 
     // Set the horn to 90degrees
     // servo.to(90);
