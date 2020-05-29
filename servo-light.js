@@ -19,35 +19,72 @@ board.on("ready", () => {
     let dimmest = 1023;
     let brightest = 0;
 
+    const leds = ['a2', 'a3', 'a4'];
+
+    console.log(leds);
+
+    const sleep = ms => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    const runLed = (led, index) => {
+    if (index === leds.length - 1) {
+        console.log(led, ' - blink');
+    } else {
+        console.log(led, ' - on');
+    }
+    return sleep(2000).then(v => console.log(led, ' - off'))
+    }
+
+    const forLoop = async _ => {
+    console.log('Start')
+
+    for (let index = 0; index < leds.length; index++) {
+        const led = leds[index]
+        await runLed(led, index);
+    }
+
+    await runServo();
+
+    console.log('End')
+    }
+
+    const runServo = async () => {
+    console.log('servo - ON')
+    return sleep(2000).then(v => console.log('servo - OFF'))
+    }
+
+    forLoop();
+
     // ledDispense.on()
     // servo.cw(1);
-    setInterval(() => {
-        sensor.stop();
-        servo.cw(1);
+    // setInterval(() => {
+    //     sensor.stop();
+    //     servo.cw(1);
 
-        setTimeout(()=> {
-            servo.stop();
-            sensor.on("change", () => {
-                let relativeValue;
-                if (sensor.value < dimmest) {
-                    dimmest = sensor.value;
-                }
-                if (sensor.value > brightest) {
-                    brightest = sensor.value;
-                }
-                relativeValue = Fn.scale(sensor.value, dimmest, brightest, 0, 511);
-                if (relativeValue <= 255) {
-                    ledWarn.brightness(255 - relativeValue);
-                    //  servo.cw(0);
-                    // console.log('warning');
-                } else {
-                    ledWarn.off();
-                    // servo.stop();
-                    // console.log('off');
-                }
-            });
-        }, 3000)
-    }, 6000)
+    //     setTimeout(()=> {
+    //         servo.stop();
+    //         sensor.on("change", () => {
+    //             let relativeValue;
+    //             if (sensor.value < dimmest) {
+    //                 dimmest = sensor.value;
+    //             }
+    //             if (sensor.value > brightest) {
+    //                 brightest = sensor.value;
+    //             }
+    //             relativeValue = Fn.scale(sensor.value, dimmest, brightest, 0, 511);
+    //             if (relativeValue <= 255) {
+    //                 ledWarn.brightness(255 - relativeValue);
+    //                 //  servo.cw(0);
+    //                 // console.log('warning');
+    //             } else {
+    //                 ledWarn.off();
+    //                 // servo.stop();
+    //                 // console.log('off');
+    //             }
+    //         });
+    //     }, 3000)
+    // }, 6000)
 
     // sensor.on("change", () => {
     //     let relativeValue;
